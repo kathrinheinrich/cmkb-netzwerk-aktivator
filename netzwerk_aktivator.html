@@ -13,7 +13,7 @@
   --gold:       #9f8252;
   --gold-light: #f0e6d6;
   --flora:      #fffcf2;
-  --greige-d:   #8e897a;
+  --greige-d:   #6b6560;
   --greige-l:   #dbd8ca;
   --white:      #ffffff;
   --sand:       #f5f0e8;
@@ -43,7 +43,7 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 .header-top { display: flex; align-items: flex-start; justify-content: space-between; padding-bottom: 11px; }
 .header-left { display: flex; flex-direction: column; gap: 2px; }
 .app-title { font-size: 13px; font-weight: 700; color: white; letter-spacing: .05em; text-transform: uppercase; }
-.app-sub { font-size: 10px; color: rgba(255,255,255,.5); font-weight: 400; }
+.app-sub { font-size: 10px; color: rgba(255,255,255,.75); font-weight: 400; }
 .header-badge {
   background: var(--gold); color: white; font-size: 11px; font-weight: 700;
   padding: 3px 10px; border-radius: 20px; font-variant-numeric: tabular-nums;
@@ -59,7 +59,7 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 .tab {
   flex: 1; min-width: 68px; padding: 9px 4px;
   text-align: center; font-size: 9px; font-weight: 600;
-  color: rgba(255,255,255,.4); cursor: pointer;
+  color: rgba(255,255,255,.65); cursor: pointer;
   border-bottom: 2px solid transparent;
   text-transform: uppercase; letter-spacing: .08em;
   transition: all .18s; white-space: nowrap;
@@ -69,13 +69,13 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 .tab.active { color: white; border-bottom-color: var(--gold); }
 
 /* ── CONTENT ── */
-.content { padding: 16px 15px 100px; max-width: 680px; margin: 0 auto; }
+.content { padding: 22px 15px 110px; max-width: 680px; margin: 0 auto; }
 .screen { display: none; }
 .screen.active { display: block; }
 
 /* ── CARDS ── */
 .card {
-  background: var(--white); border-radius: 14px; margin-bottom: 12px;
+  background: var(--white); border-radius: 14px; margin-bottom: 14px;
   overflow: hidden; box-shadow: 0 2px 12px rgba(26,92,92,.07);
 }
 .card-header { padding: 12px 15px; display: flex; align-items: center; gap: 9px; }
@@ -136,7 +136,7 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 }
 
 /* ── STAT ROW ── */
-.stat-row { display: flex; gap: 8px; margin-bottom: 14px; }
+.stat-row { display: flex; gap: 8px; margin-bottom: 16px; }
 .stat-box {
   flex: 1; background: white; border-radius: 12px; padding: 12px 8px;
   text-align: center; box-shadow: 0 1px 8px rgba(26,92,92,.07);
@@ -151,14 +151,14 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 /* ── SECTION LABEL ── */
 .section-label {
   font-size: 9px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: .12em; color: var(--gold); margin-bottom: 8px; margin-top: 4px;
+  letter-spacing: .12em; color: var(--gold); margin-bottom: 8px; margin-top: 10px;
 }
 
 /* ── HINT BOX ── */
 .hint-box {
-  background: var(--sand); border-radius: 10px; padding: 10px 14px;
-  font-size: 11px; color: var(--greige-d); line-height: 1.65;
-  margin-bottom: 12px;
+  background: var(--sand); border-radius: 10px; padding: 12px 15px;
+  font-size: 11px; color: #3d3a34; line-height: 1.7;
+  margin-bottom: 14px;
 }
 .hint-box strong { color: var(--teal-dark); }
 
@@ -170,13 +170,13 @@ input[type="text"], input[type="date"], input[type="time"], select, textarea {
   background: var(--flora); outline: none; transition: border-color .2s;
 }
 input:focus, select:focus, textarea:focus {
-  border-color: var(--teal-mid); background: white;
+  border-color: #2d7a86; background: white;
 }
 textarea { resize: vertical; min-height: 58px; line-height: 1.55; }
 input::placeholder { color: var(--greige-d); }
 
 /* ── QUICK ADD ── */
-.quick-add { display: flex; gap: 7px; margin-bottom: 12px; }
+.quick-add { display: flex; gap: 7px; margin-bottom: 14px; }
 .quick-add input { flex: 1; }
 .btn-add {
   background: var(--teal-dark); color: white; border: none;
@@ -196,7 +196,7 @@ input::placeholder { color: var(--greige-d); }
 .bs-item:hover { border-color: var(--teal-light); }
 .bs-num { font-size: 10px; color: var(--greige-d); font-weight: 600; min-width: 20px; font-variant-numeric: tabular-nums; }
 .bs-name { flex: 1; font-size: 13px; font-weight: 500; }
-.bs-cat { font-size: 9px; color: var(--teal-mid); font-weight: 500; }
+.bs-cat { font-size: 9px; color: #2d7a86; font-weight: 500; }
 .btn-del {
   background: none; border: 1px solid transparent; border-radius: 50%;
   width: 22px; height: 22px; cursor: pointer; font-size: 13px;
@@ -289,8 +289,8 @@ input::placeholder { color: var(--greige-d); }
   background: var(--flora); color: var(--greige-d); transition: all .15s;
   font-family: 'Inter', sans-serif;
 }
-.sbtn:hover { border-color: var(--teal-mid); color: var(--teal-dark); }
-.sbtn.s-offen         { background: var(--teal-light); color: var(--teal-dark); border-color: var(--teal-mid); }
+.sbtn:hover { border-color: #2d7a86; color: var(--teal-dark); }
+.sbtn.s-offen         { background: var(--teal-light); color: var(--teal-dark); border-color: #2d7a86; }
 .sbtn.s-erreicht      { background: var(--warm-bg); color: var(--warm-c); border-color: var(--warm-c); }
 .sbtn.s-nicht_erreicht { background: #fef3cd; color: #856404; border-color: #9f8252; }
 .sbtn.s-neuer_termin  { background: var(--gold-light); color: var(--gold); border-color: var(--gold); }
@@ -377,7 +377,7 @@ input::placeholder { color: var(--greige-d); }
   line-height: 1.7; color: var(--text); background: var(--flora);
   min-height: 150px; resize: vertical; outline: none;
 }
-.script-text:focus { border-color: var(--teal-mid); background: white; }
+.script-text:focus { border-color: #2d7a86; background: white; }
 .btn-copy {
   width: 100%; margin-top: 9px; padding: 11px; background: var(--gold);
   color: white; border: none; border-radius: 10px; font-size: 12px; font-weight: 700;
@@ -465,7 +465,7 @@ input::placeholder { color: var(--greige-d); }
   outline: none; margin-bottom: 14px;
   letter-spacing: .1em; transition: border-color .2s;
 }
-.login-input:focus { border-color: var(--teal-mid); background: #fff; }
+.login-input:focus { border-color: #2d7a86; background: #fff; }
 .login-btn {
   width: 100%; background: var(--teal-dark); color: #fff;
   border: none; padding: 13px; border-radius: 10px;
@@ -480,6 +480,56 @@ input::placeholder { color: var(--greige-d); }
 .login-hint {
   font-size: 10px; color: var(--greige-d);
   text-align: center; margin-top: 14px; line-height: 1.6; font-style: italic;
+}
+
+
+/* ── WARN-BANNER ── */
+#warn-banner {
+  display: none;
+  background: var(--red-bg); border-left: 4px solid var(--red-fg);
+  padding: 12px 16px; align-items: flex-start; gap: 10px;
+  font-size: 11px; color: var(--red-fg); line-height: 1.7;
+  max-width: 680px; margin: 14px auto 0; border-radius: 0 10px 10px 0;
+}
+#warn-banner .wi { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+/* ── FAB ── */
+.fab-link {
+  position: fixed; bottom: 24px; right: 20px;
+  background: var(--gold); color: white; border: none;
+  border-radius: 28px; padding: 13px 18px;
+  font-size: 12px; font-weight: 700; font-family: 'Inter', sans-serif;
+  cursor: pointer; box-shadow: 0 6px 20px rgba(159,130,82,.4);
+  transition: all .2s; z-index: 500; display: none;
+  white-space: nowrap;
+}
+.fab-link:hover { background: #8a7045; transform: translateY(-1px); }
+
+/* ── LINK-DIALOG ── */
+#link-dialog {
+  position: fixed; inset: 0; background: rgba(11,57,72,.5);
+  display: none; align-items: center; justify-content: center;
+  z-index: 2500; padding: 20px;
+}
+#link-dialog.vis { display: flex; }
+.link-box {
+  background: var(--white); border-radius: 16px; padding: 24px;
+  max-width: 420px; width: 100%;
+  box-shadow: 0 20px 60px rgba(11,57,72,.3);
+}
+.link-box h3 { font-size: 15px; font-weight: 700; color: var(--teal-dark); margin-bottom: 6px; }
+.link-box p  { font-size: 11px; color: var(--greige-d); line-height: 1.65; margin-bottom: 14px; }
+#link-output {
+  width: 100%; padding: 10px 12px;
+  border: 1.5px solid var(--teal-light); border-radius: 8px;
+  font-size: 10px; font-family: 'Inter', monospace;
+  color: var(--teal-dark); background: var(--teal-light);
+  margin-bottom: 12px; word-break: break-all; resize: none;
+}
+.link-btns { display: flex; gap: 8px; }
+.link-btns button {
+  flex: 1; padding: 10px; border: none; border-radius: 8px;
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; cursor: pointer;
 }
 
 </style>
@@ -511,12 +561,37 @@ input::placeholder { color: var(--greige-d); }
   </div>
   <div class="tabs">
     <div class="tab active" data-tab="einstieg">🌟 Einstieg</div>
-    <div class="tab" data-tab="brainstorm">⚡ Brainstorm</div>
+    <div class="tab" data-tab="braindump">⚡ Braindump</div>
     <div class="tab" data-tab="clustern">🗂 Clustern</div>
     <div class="tab" data-tab="aktivieren">🎯 Aktivieren</div>
     <div class="tab" data-tab="uebersicht">📊 Übersicht</div>
   </div>
 </header>
+
+
+<!-- ── WARN-BANNER ── -->
+<div id="warn-banner">
+  <span class="wi">⚠️</span>
+  <span><strong>Achtung:</strong> Deine Daten sind nur auf diesem Gerät gespeichert und gehen verloren, sobald du den Browser schließt.<br>
+  <strong>Erstelle nach jeder Eingabe einen neuen Link</strong> — klicke auf <strong>🔗 Link zum Speichern erstellen</strong> und speichere ihn als Lesezeichen oder schick ihn dir per E-Mail.</span>
+</div>
+
+<!-- ── FAB ── -->
+<button class="fab-link" id="fab-link" onclick="openLinkDialog()">🔗 Link zum Speichern erstellen</button>
+
+<!-- ── LINK-DIALOG ── -->
+<div id="link-dialog">
+  <div class="link-box">
+    <h3>🔗 Dein persönlicher Link</h3>
+    <p>Dieser Link enthält alle deine Kontakte. Speichere ihn als Lesezeichen oder schick ihn dir per E-Mail.<br>
+    <strong>Deine Daten existieren ausschließlich in diesem Link</strong> — es gibt keinen Server.</p>
+    <textarea id="link-output" rows="4" readonly></textarea>
+    <div class="link-btns">
+      <button onclick="copyLink()" style="background:var(--teal-dark);color:white;">📋 Kopieren</button>
+      <button onclick="document.getElementById('link-dialog').classList.remove('vis')" style="background:var(--greige-l);color:var(--greige-d);">Schließen</button>
+    </div>
+  </div>
+</div>
 
 <div class="content">
 
@@ -569,7 +644,7 @@ input::placeholder { color: var(--greige-d); }
           <div style="display:flex;gap:11px;align-items:flex-start;">
             <div style="background:var(--teal-dark);color:white;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px;">1</div>
             <div>
-              <div style="font-size:12px;font-weight:600;margin-bottom:2px;">Brainstorming</div>
+              <div style="font-size:12px;font-weight:600;margin-bottom:2px;">Braindump</div>
               <div style="font-size:11px;color:var(--greige-d);line-height:1.55;">Namen schnell erfassen — ohne Struktur, ohne Selektion. Quantität vor Qualität.</div>
             </div>
           </div>
@@ -588,7 +663,7 @@ input::placeholder { color: var(--greige-d); }
             </div>
           </div>
         </div>
-        <button class="btn-primary" onclick="showTab('brainstorm')">Jetzt starten → Brainstorming</button>
+        <button class="btn-primary" onclick="showTab('braindump')">Jetzt starten → Braindump</button>
       </div>
     </div>
 
@@ -610,7 +685,7 @@ input::placeholder { color: var(--greige-d); }
 
 
   <!-- ═══ SCREEN: BRAINSTORMING ═══ -->
-  <div class="screen" id="screen-brainstorm">
+  <div class="screen" id="screen-braindump">
 
     <div class="hint-box">
       ⚡ <strong>Quantität vor Qualität.</strong> Trag jeden ein, der dir einfällt — Familie, Ex-Kollegen, Sportfreunde, LinkedIn-Kontakte. Kein Filter, kein Bewerten. Das kommt im nächsten Schritt.
@@ -660,7 +735,7 @@ input::placeholder { color: var(--greige-d); }
 
     <button class="btn-primary" id="bs-next-btn" style="display:none" onclick="showTab('clustern')">Weiter → Clustern</button>
 
-  </div><!-- /brainstorm -->
+  </div><!-- /braindump -->
 
 
   <!-- ═══ SCREEN: CLUSTERN ═══ -->
@@ -964,7 +1039,7 @@ function showTab(name) {
   document.querySelectorAll('.screen').forEach(s => {
     s.classList.toggle('active', s.id === 'screen-' + name);
   });
-  if (name === 'brainstorm')  renderBrainstorm();
+  if (name === 'braindump')  renderBraindump();
   if (name === 'clustern')    renderClustern();
   if (name === 'aktivieren')  renderAktivieren();
   if (name === 'uebersicht')  renderUebersicht();
@@ -999,17 +1074,19 @@ function addContact(name) {
   if (catSel) catSel.value = '';
   save();
   updateGlobalStats();
-  renderBrainstorm();
+  renderBraindump();
+  showWarnAndFab();
 }
 
 function deleteContact(id) {
   state.contacts = state.contacts.filter(c => c.id !== id);
   save();
   updateGlobalStats();
-  renderBrainstorm();
+  renderBraindump();
+  showWarnAndFab();
 }
 
-function renderBrainstorm() {
+function renderBraindump() {
   const cs = state.contacts;
   const list = document.getElementById('bs-list');
   const empty = document.getElementById('bs-empty');
@@ -1080,8 +1157,8 @@ function setWarmth(id, w) {
 }
 
 function updateBsItem(id) {
-  // Update brainstorm list if visible
-  renderBrainstorm();
+  // Update braindump list if visible
+  renderBraindump();
 }
 
 function markCluCardDone(id) {
@@ -1525,8 +1602,64 @@ try {
 } catch(e) {}
 // ── END LOGIN ───────────────────────────────────────────────────────────────
 
+
+// ── URL / LINK SPEICHERN ────────────────────────────────────────────────────
+function showWarnAndFab() {
+  if (state.contacts.length > 0) {
+    const wb = document.getElementById('warn-banner');
+    const fb = document.getElementById('fab-link');
+    if (wb) wb.style.display = 'flex';
+    if (fb) fb.style.display = 'block';
+  }
+}
+
+function buildUrl() {
+  const data = JSON.stringify({ contacts: state.contacts });
+  const encoded = encodeURIComponent(btoa(unescape(encodeURIComponent(data))));
+  return window.location.origin + window.location.pathname + '?d=' + encoded;
+}
+
+function openLinkDialog() {
+  document.getElementById('link-output').value = buildUrl();
+  document.getElementById('link-dialog').classList.add('vis');
+}
+
+function copyLink() {
+  const ta = document.getElementById('link-output');
+  ta.select();
+  try {
+    navigator.clipboard.writeText(ta.value).then(() => toast('Link kopiert ✓'));
+  } catch(e) {
+    document.execCommand('copy');
+    toast('Link kopiert ✓');
+  }
+}
+
+document.getElementById('link-dialog').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.remove('vis');
+});
+
+// URL-Parameter beim Laden prüfen
+function loadFromUrl() {
+  try {
+    const p = new URLSearchParams(window.location.search);
+    const d = p.get('d');
+    if (d) {
+      const json = decodeURIComponent(escape(atob(decodeURIComponent(d))));
+      const parsed = JSON.parse(json);
+      if (parsed.contacts) {
+        state.contacts = parsed.contacts;
+        showWarnAndFab();
+      }
+    }
+  } catch(e) {}
+}
+// ── END URL ─────────────────────────────────────────────────────────────────
+
+loadFromUrl();
 load();
 updateGlobalStats();
+showWarnAndFab();
 
 </script>
 </body>
