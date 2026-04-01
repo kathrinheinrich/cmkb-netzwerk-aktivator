@@ -9,8 +9,9 @@
 :root {
   --teal-dark:  #0B3948;
   --teal-mid:   #5da7b2;
+  --teal-text:  #2d7a86;
   --teal-light: #c8e6ea;
-  --gold:       #9f8252;
+  --gold:       #7a5f3a;
   --gold-light: #f0e6d6;
   --flora:      #fffcf2;
   --greige-d:   #6b6560;
@@ -19,13 +20,13 @@
   --sand:       #f5f0e8;
   --evid-bg:    #e6f2e6;
   --evid-fg:    #2d5a2d;
-  --warm-c:     #3a9e6e;
+  --warm-c:     #2d7a52;
   --warm-bg:    #d0eddf;
   --mittel-c:   #b8903a;
   --mittel-bg:  #fef0c8;
   --kalt-c:     #8e897a;
   --kalt-bg:    #ebebeb;
-  --red-fg:     #c0544a;
+  --red-fg:     #a33e35;
   --red-bg:     #fde8e8;
   --text:       #1a1a1a;
 }
@@ -42,7 +43,7 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 }
 .header-top { display: flex; align-items: flex-start; justify-content: space-between; padding-bottom: 11px; }
 .header-left { display: flex; flex-direction: column; gap: 2px; }
-.app-title { font-size: 14px; font-weight: 700; color: white; letter-spacing: .05em; text-transform: uppercase; }
+.app-title { font-size: 15px; font-weight: 700; color: white; letter-spacing: .04em; text-transform: uppercase; }
 .app-sub { font-size: 10px; color: rgba(255,255,255,.75); font-weight: 400; }
 .header-badge {
   background: var(--gold); color: white; font-size: 12px; font-weight: 700;
@@ -57,8 +58,8 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 }
 .tabs::-webkit-scrollbar { display: none; }
 .tab {
-  flex: 1; min-width: 68px; padding: 10px 4px;
-  text-align: center; font-size: 10px; font-weight: 600;
+  flex: 1; min-width: 68px; padding: 11px 4px;
+  text-align: center; font-size: 11px; font-weight: 600;
   color: rgba(255,255,255,.65); cursor: pointer;
   border-bottom: 2px solid transparent;
   text-transform: uppercase; letter-spacing: .08em;
@@ -75,7 +76,7 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 
 /* ── CARDS ── */
 .card {
-  background: var(--white); border-radius: 14px; margin-bottom: 14px;
+  background: var(--white); border-radius: 14px; margin-bottom: 16px;
   overflow: hidden; box-shadow: 0 2px 12px rgba(26,92,92,.07);
 }
 .card-header { padding: 12px 15px; display: flex; align-items: center; gap: 9px; }
@@ -83,15 +84,15 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 .card-header.gold { background: var(--gold); }
 .card-header.mid  { background: var(--teal-mid); }
 .ch-icon { font-size: 14px; }
-.ch-title { font-size: 12px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: .05em; }
-.ch-sub   { font-size: 11px; color: rgba(255,255,255,.6); margin-top: 2px; }
-.card-body { padding: 14px 15px; }
+.ch-title { font-size: 13px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: .04em; }
+.ch-sub   { font-size: 12px; color: rgba(255,255,255,.7); margin-top: 2px; }
+.card-body { padding: 16px 17px; }
 
 /* ── EVIDENZ ── */
 .evid-box {
   background: var(--evid-bg); color: var(--evid-fg);
   border-radius: 10px; padding: 11px 14px;
-  font-size: 12px; font-style: italic; line-height: 1.7;
+  font-size: 13px; font-style: italic; line-height: 1.75;
   margin-bottom: 12px;
 }
 
@@ -117,7 +118,7 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
   position: relative; z-index: 1;
 }
 .intro-quote {
-  font-size: 15px; font-weight: 300; color: rgba(255,255,255,.9);
+  font-size: 16px; font-weight: 300; color: rgba(255,255,255,.92);
   line-height: 1.75; font-style: italic; position: relative; z-index: 1;
   margin-bottom: 14px; padding-left: 14px;
   border-left: 2px solid var(--gold);
@@ -131,7 +132,7 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
   position: relative; z-index: 1; line-height: 1.3; margin-bottom: 6px;
 }
 .intro-body {
-  font-size: 13px; color: rgba(255,255,255,.78); line-height: 1.75;
+  font-size: 14px; color: rgba(255,255,255,.82); line-height: 1.8;
   position: relative; z-index: 1;
 }
 
@@ -141,8 +142,8 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
   flex: 1; background: white; border-radius: 12px; padding: 12px 8px;
   text-align: center; box-shadow: 0 1px 8px rgba(26,92,92,.07);
 }
-.stat-n { font-size: 26px; font-weight: 700; color: var(--teal-dark); line-height: 1; font-variant-numeric: tabular-nums; }
-.stat-l { font-size: 10px; font-weight: 600; color: var(--greige-d); text-transform: uppercase; letter-spacing: .07em; margin-top: 4px; }
+.stat-n { font-size: 30px; font-weight: 700; color: var(--teal-dark); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat-l { font-size: 11px; font-weight: 600; color: var(--greige-d); text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; }
 .stat-n.warm  { color: var(--warm-c); }
 .stat-n.mittel { color: var(--mittel-c); }
 .stat-n.kalt  { color: var(--kalt-c); }
@@ -151,13 +152,13 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 /* ── SECTION LABEL ── */
 .section-label {
   font-size: 9px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: .1em; color: var(--gold); margin-bottom: 9px; margin-top: 12px; font-size: 10px;
+  letter-spacing: .08em; color: var(--gold); margin-bottom: 9px; margin-top: 12px; font-size: 12px;
 }
 
 /* ── HINT BOX ── */
 .hint-box {
   background: var(--sand); border-radius: 10px; padding: 12px 15px;
-  font-size: 13px; color: #3d3a34; line-height: 1.75;
+  font-size: 14px; color: #3d3a34; line-height: 1.8;
   margin-bottom: 14px;
 }
 .hint-box strong { color: var(--teal-dark); }
@@ -165,12 +166,12 @@ body { font-family: 'Inter', sans-serif; background: var(--flora); color: var(--
 /* ── INPUTS ── */
 input[type="text"], input[type="date"], input[type="time"], select, textarea {
   width: 100%; padding: 9px 11px; font-family: 'Inter', sans-serif;
-  font-size: 13px; color: var(--text);
+  font-size: 14px; color: var(--text);
   border: 1.5px solid var(--greige-l); border-radius: 9px;
   background: var(--flora); outline: none; transition: border-color .2s;
 }
 input:focus, select:focus, textarea:focus {
-  border-color: #2d7a86; background: white;
+  border-color: var(--teal-text); background: white;
 }
 textarea { resize: vertical; min-height: 58px; line-height: 1.55; }
 input::placeholder { color: var(--greige-d); }
@@ -195,8 +196,8 @@ input::placeholder { color: var(--greige-d); }
 }
 .bs-item:hover { border-color: var(--teal-light); }
 .bs-num { font-size: 10px; color: var(--greige-d); font-weight: 600; min-width: 20px; font-variant-numeric: tabular-nums; }
-.bs-name { flex: 1; font-size: 14px; font-weight: 500; }
-.bs-cat { font-size: 9px; color: #2d7a86; font-weight: 500; }
+.bs-name { flex: 1; font-size: 15px; font-weight: 500; }
+.bs-cat { font-size: 9px; color: var(--teal-text); font-weight: 500; }
 .btn-del {
   background: none; border: 1px solid transparent; border-radius: 50%;
   width: 22px; height: 22px; cursor: pointer; font-size: 13px;
@@ -209,7 +210,7 @@ input::placeholder { color: var(--greige-d); }
 /* ── WARMTH CHIPS ── */
 .warmth-chips { display: flex; gap: 5px; margin-top: 7px; }
 .wchip {
-  padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 600;
+  padding: 7px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;
   cursor: pointer; border: 1.5px solid var(--greige-l);
   background: var(--flora); color: var(--greige-d); transition: all .15s;
   font-family: 'Inter', sans-serif;
@@ -234,7 +235,7 @@ input::placeholder { color: var(--greige-d); }
 }
 .clu-card.done { border-color: var(--teal-light); background: #f6fefe; }
 .clu-card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-.clu-name { flex: 1; font-size: 14px; font-weight: 600; }
+.clu-name { flex: 1; font-size: 15px; font-weight: 600; }
 .clu-icon { font-size: 11px; }
 .clu-row { display: flex; gap: 5px; align-items: center; flex-wrap: wrap; }
 
@@ -248,7 +249,7 @@ input::placeholder { color: var(--greige-d); }
 /* ── FILTER ROW ── */
 .filter-row { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 11px; }
 .fchip {
-  padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 600;
+  padding: 7px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;
   cursor: pointer; border: 1.5px solid var(--greige-l);
   background: var(--flora); color: var(--greige-d); transition: all .15s;
   font-family: 'Inter', sans-serif;
@@ -259,8 +260,8 @@ input::placeholder { color: var(--greige-d); }
 /* ── PROGRESS ── */
 .prog-wrap { margin-bottom: 12px; }
 .prog-info { display: flex; justify-content: space-between; margin-bottom: 5px; }
-.prog-label { font-size: 11px; color: var(--greige-d); }
-.prog-val   { font-size: 11px; font-weight: 600; color: var(--teal-dark); font-variant-numeric: tabular-nums; }
+.prog-label { font-size: 13px; color: var(--greige-d); }
+.prog-val   { font-size: 13px; font-weight: 600; color: var(--teal-dark); font-variant-numeric: tabular-nums; }
 .prog-bar   { background: var(--greige-l); border-radius: 4px; height: 6px; overflow: hidden; }
 .prog-fill  { height: 100%; background: var(--gold); border-radius: 4px; transition: width .5s ease; }
 .prog-fill.green { background: var(--warm-c); }
@@ -278,19 +279,19 @@ input::placeholder { color: var(--greige-d); }
   padding: 11px 13px; display: flex; align-items: center; gap: 8px;
   border-bottom: 1px solid var(--greige-l); flex-wrap: wrap;
 }
-.akt-name { font-size: 14px; font-weight: 600; flex: 1; }
+.akt-name { font-size: 15px; font-weight: 600; flex: 1; }
 .akt-body { padding: 11px 13px; }
 
 /* ── STATUS BUTTONS ── */
 .status-btns { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 8px; }
 .sbtn {
-  padding: 7px 11px; border-radius: 7px; font-size: 11px; font-weight: 600;
+  padding: 8px 13px; border-radius: 7px; font-size: 13px; font-weight: 600;
   cursor: pointer; border: 1.5px solid var(--greige-l);
   background: var(--flora); color: var(--greige-d); transition: all .15s;
   font-family: 'Inter', sans-serif;
 }
-.sbtn:hover { border-color: #2d7a86; color: var(--teal-dark); }
-.sbtn.s-offen         { background: var(--teal-light); color: var(--teal-dark); border-color: #2d7a86; }
+.sbtn:hover { border-color: var(--teal-text); color: var(--teal-dark); }
+.sbtn.s-offen         { background: var(--teal-light); color: var(--teal-dark); border-color: var(--teal-text); }
 .sbtn.s-erreicht      { background: var(--warm-bg); color: var(--warm-c); border-color: var(--warm-c); }
 .sbtn.s-nicht_erreicht { background: #fef3cd; color: #856404; border-color: #9f8252; }
 .sbtn.s-neuer_termin  { background: var(--gold-light); color: var(--gold); border-color: var(--gold); }
@@ -298,7 +299,7 @@ input::placeholder { color: var(--greige-d); }
 /* ── ACTION BUTTONS ── */
 .act-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 7px; }
 .abt {
-  padding: 8px 13px; border-radius: 8px; font-size: 11px; font-weight: 600;
+  padding: 9px 14px; border-radius: 8px; font-size: 13px; font-weight: 600;
   cursor: pointer; border: none; transition: all .18s; font-family: 'Inter', sans-serif;
   text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
 }
@@ -318,7 +319,7 @@ input::placeholder { color: var(--greige-d); }
 /* ── PRIMARY / OUTLINE BUTTONS ── */
 .btn-primary {
   display: block; width: 100%; padding: 12px; border: none; border-radius: 10px;
-  background: var(--teal-dark); color: white; font-size: 14px; font-weight: 600;
+  background: var(--teal-dark); color: white; font-size: 15px; font-weight: 600;
   cursor: pointer; text-align: center; font-family: 'Inter', sans-serif;
   transition: background .18s; margin-top: 8px; letter-spacing: .02em;
 }
@@ -377,7 +378,7 @@ input::placeholder { color: var(--greige-d); }
   line-height: 1.7; color: var(--text); background: var(--flora);
   min-height: 150px; resize: vertical; outline: none;
 }
-.script-text:focus { border-color: #2d7a86; background: white; }
+.script-text:focus { border-color: var(--teal-text); background: white; }
 .btn-copy {
   width: 100%; margin-top: 9px; padding: 11px; background: var(--gold);
   color: white; border: none; border-radius: 10px; font-size: 12px; font-weight: 700;
@@ -409,9 +410,9 @@ input::placeholder { color: var(--greige-d); }
   box-shadow: 0 1px 6px rgba(26,92,92,.07);
 }
 .cat-stat-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
-.cat-stat-name { font-size: 13px; font-weight: 600; }
+.cat-stat-name { font-size: 14px; font-weight: 600; }
 .cat-stat-icon { font-size: 13px; }
-.cat-stat-count { font-size: 12px; color: var(--greige-d); margin-bottom: 5px; }
+.cat-stat-count { font-size: 13px; color: var(--greige-d); margin-bottom: 5px; }
 
 /* ── EMPTY STATE ── */
 .empty {
@@ -465,7 +466,7 @@ input::placeholder { color: var(--greige-d); }
   outline: none; margin-bottom: 14px;
   letter-spacing: .1em; transition: border-color .2s;
 }
-.login-input:focus { border-color: #2d7a86; background: #fff; }
+.login-input:focus { border-color: var(--teal-text); background: #fff; }
 .login-btn {
   width: 100%; background: var(--teal-dark); color: #fff;
   border: none; padding: 13px; border-radius: 10px;
@@ -581,7 +582,7 @@ input::placeholder { color: var(--greige-d); }
 
 <div class="content">
 
-<div id="warn-banner" style="display:flex;background:#fde8e8;border-left:4px solid #c0544a;padding:13px 16px;align-items:flex-start;gap:10px;font-size:13px;color:#c0544a;line-height:1.7;border-radius:10px;margin-bottom:16px;">
+<div id="warn-banner" style="display:flex;background:#fde8e8;border-left:4px solid #c0544a;padding:13px 16px;align-items:flex-start;gap:10px;font-size:14px;color:#a33e35;line-height:1.7;border-radius:10px;margin-bottom:16px;">
     <span style="font-size:18px;flex-shrink:0;margin-top:1px;">⚠️</span>
     <span><strong>Achtung — nach jeder Eingabe speichern:</strong><br>
     Deine Daten existieren nur in diesem Browser. Sobald du das Fenster schließt, sind sie weg.<br>
@@ -767,6 +768,10 @@ input::placeholder { color: var(--greige-d); }
       ✅ <strong>Gut gemacht.</strong> Im nächsten Schritt siehst du alle kategorisierten Kontakte und kannst sie aktivieren — mit Status, Datum und passendem Gesprächsskript. Starte mit deinen <span style="color:var(--warm-c);font-weight:600;">warmen</span> Kontakten.
     </div>
 
+    <div class="hint-box" style="margin-top:12px;background:var(--sand);color:#3d3a34;">
+      💡 <strong>Wenn alle Kontakte kategorisiert sind:</strong> Klicke auf <strong>Weiter → Aktivieren</strong> oder wähle den Tab <strong>🎯 Aktivieren</strong> direkt oben.
+    </div>
+
   </div><!-- /clustern -->
 
 
@@ -785,7 +790,7 @@ input::placeholder { color: var(--greige-d); }
       <span style="font-size:20px;flex-shrink:0;">🧭</span>
       <div>
         <strong>Bereite deine Gespräche inhaltlich vor — mit dem Gesprächskompass.</strong><br>
-        <a href="https://kathrinheinrich.github.io/gespraeche_kompass/gespraeche_kompass.html" target="_blank" style="color:var(--teal-dark);font-weight:600;text-decoration:underline;">→ Gesprächskompass öffnen</a>
+        <a href="https://kathrinheinrich.github.io/gespraeche_kompass/gespraeche_kompass.html" target="_blank" style="display:inline-block;margin-top:7px;background:var(--teal-dark);color:white;padding:7px 14px;border-radius:8px;font-weight:600;text-decoration:none;font-size:12px;">🧭 Gesprächskompass öffnen →</a>
       </div>
     </div>
 
@@ -866,13 +871,13 @@ input::placeholder { color: var(--greige-d); }
       📚 Wer Netzwerkgespräche konkret terminiert, führt sie. Wer sie plant, schiebt sie auf. Datum eintragen im Aktivieren-Tab — hier siehst du den Überblick.
     </div>
 
-    <div class="section-label">Geplante Termine — chronologisch</div>
+    <div class="section-label">Kontakte mit Termin oder Datum — chronologisch</div>
 
     <div id="planung-list"></div>
 
     <div id="planung-empty" class="empty">
       <div class="empty-icon">📅</div>
-      <div class="empty-text">Noch keine Termine geplant.<br>Im Aktivieren-Tab Status auf "📅 Termin" setzen und Datum eintragen.</div>
+      <div class="empty-text">Noch kein Datum eingetragen.<br>Im Aktivieren-Tab bei jedem Kontakt ein Datum setzen.</div>
     </div>
 
   </div><!-- /planung -->
@@ -1678,8 +1683,8 @@ function renderPlanung() {
   const list  = document.getElementById('planung-list');
   const empty = document.getElementById('planung-empty');
 
-  // Nur Kontakte mit Termin (Status: Neuer Termin)
-  let cs = state.contacts.filter(c => c.status === 'neuer_termin' && c.date && c.date.trim() !== '');
+  // Alle Kontakte mit eingetragenem Datum
+  let cs = state.contacts.filter(c => c.date && c.date.trim() !== '');
 
   // Chronologisch sortieren
   cs.sort((a, b) => {
